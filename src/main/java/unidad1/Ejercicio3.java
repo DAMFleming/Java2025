@@ -18,6 +18,7 @@ public class Ejercicio3 {
 
 	public static void main(String[] args) {
 		int año = 2049;
+		boolean bisiesto = año % 4 == 0 && (año % 100 != 0 || año % 400 == 0);
 		
 	}
 
