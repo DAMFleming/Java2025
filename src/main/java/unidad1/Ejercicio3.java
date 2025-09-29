@@ -1,5 +1,9 @@
 package unidad1;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 /*
  * Según Wikipedia: 
  * 
@@ -16,10 +20,14 @@ package unidad1;
 
 public class Ejercicio3 {
 
-	public static void main(String[] args) {
-		int año = 2049;
+	public static void main(String[] args) throws IOException {
+		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+		System.out.print("Introduce un año: ");
+		String linea;
+		linea = in.readLine();
+		short año = Short.parseShort(linea);
 		boolean bisiesto = año % 4 == 0 && (año % 100 != 0 || año % 400 == 0);
-		
+		System.out.println("Bisiesto: " + bisiesto);
 	}
 
 }
