@@ -35,7 +35,7 @@ public class Ejercicio14 {
 		System.out.println("Introduce longitud del segundo punto: ");
 		long2 = in.nextDouble();
 		d = R * Math.acos(Math.sin(lat1) * Math.sin(lat2) + Math.cos(lat1) * Math.cos(lat2) * Math.cos(long2 - long1));
-		System.out.println("Distancia entre los dos puntos: %f");
+		System.out.printf("Distancia entre los dos puntos: %f", d);
 		in.close();
 	}
 	
