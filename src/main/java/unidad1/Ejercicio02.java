@@ -7,7 +7,7 @@ package unidad1;
  * es distinto de d.
  */
 
-public class Ejercicio2 {
+public class Ejercicio02 {
 
 	public static void main(String[] args) {
 		int a = 0;

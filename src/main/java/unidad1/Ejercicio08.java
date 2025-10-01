@@ -15,7 +15,7 @@ import java.io.InputStreamReader;
  * 
  */
 
-public class Ejercicio8 {
+public class Ejercicio08 {
 
 //	public static void main(String[] args) throws IOException {
 //		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));

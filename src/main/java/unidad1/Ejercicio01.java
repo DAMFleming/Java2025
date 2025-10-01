@@ -16,7 +16,7 @@ package unidad1;
  *    obtiene de la operación descrita en el primer punto. 
  */
 
-public class Ejercicio1 {
+public class Ejercicio01 {
 
 	public static void main(String[] args) {
 		int a = -9;

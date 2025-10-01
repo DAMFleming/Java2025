@@ -6,7 +6,7 @@ package unidad1;
  * usarán para la parte decimal.
  */
 
-public class Ejercicio6 {
+public class Ejercicio06 {
 
 	public static void main(String[] args) {
 		float v = 1234f / 532f;

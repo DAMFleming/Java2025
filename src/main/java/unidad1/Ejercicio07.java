@@ -9,7 +9,7 @@ import java.io.InputStreamReader;
  * con una velocidad inicial de 5 m/s y una aceleración de 2 m/s2.
  */
 
-public class Ejercicio7 {
+public class Ejercicio07 {
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
