@@ -27,6 +27,7 @@ public class Ejercicio12 {
 			suma += n;
 			contador++;
 		}
+		
 	}
 
 }
