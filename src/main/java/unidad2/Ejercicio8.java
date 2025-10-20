@@ -24,7 +24,7 @@ package unidad2;
 public class Ejercicio8 {
 
 	public static void main(String[] args) {
-		System.out.println(clasificarPorLados(101, 201, 300));
+				
 	}
 	
 	static String clasificarPorLados(double l1, double l2, double l3) {
@@ -38,6 +38,33 @@ public class Ejercicio8 {
 		}
 		else 
 			return "imposible";
+		
+	}
+	
+	static String clasificarPorAngulos(double a1, double a2, double a3) {
+//		if (a1 > 0 && a2 > 0 && a3 > 0 && a1 + a2 + a3 == 180) {
+//			if (a1 < 90 && a2 < 90 && a3 < 90)
+//				return "acutángulo";
+//			else if (a1 == 90 || a2 == 90 || a3 == 90)
+//				)
+//				return "rectángulo";
+//			else /* if (a1 > 90 || a2 > 90 || a3 > 90) */
+//				return "escaleno";
+//		}
+//		else 
+//			return "imposible";
+		
+		if (!(a1 > 0 && a2 > 0 && a3 > 0 && a1 + a2 + a3 == 180)) 
+			return "imposible";
+		else {
+			if (a1 < 90 && a2 < 90 && a3 < 90)
+				return "acutángulo";
+			else if (a1 == 90 || a2 == 90 || a3 == 90)
+				)
+				return "rectángulo";
+			else /* if (a1 > 90 || a2 > 90 || a3 > 90) */
+				return "escaleno";
+		}
 		
 	}
 	
