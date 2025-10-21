@@ -1,5 +1,7 @@
 package unidad2;
 
+import java.util.Scanner;
+
 /*
  * Crea los métodos siguientes:
  * 
@@ -24,7 +26,41 @@ package unidad2;
 public class Ejercicio8 {
 
 	public static void main(String[] args) {
-				
+		Scanner in = new Scanner(System.in);
+		int op;
+		do {
+			System.out.println("1 - Clasificar triángulo por lados");
+			System.out.println("2 - Clasificar triángulo por ángulos");
+			System.out.println("3 - Salir");
+			System.out.print("Elige una opción: ");
+			op = in.nextInt();
+			String resultado = null;
+			if (op == 1) {
+				int lado1, lado2, lado3;
+				System.out.print("Introduce la longitud del primer lado: ");
+				lado1 = in.nextInt();
+				System.out.print("Introduce la longitud del segundo lado: ");
+				lado2 = in.nextInt();
+				System.out.print("Introduce la longitud del tercer lado: ");
+				lado3 = in.nextInt();
+				resultado = clasificarPorLados(lado1, lado2, lado3);
+			}
+			else if (op == 2) {
+				int angulo1, angulo2, angulo3;
+				System.out.print("Introduce el valor del primer ángulo: ");
+				angulo1 = in.nextInt();
+				System.out.print("Introduce el valor del segundo ángulo: ");
+				angulo2 = in.nextInt();
+				System.out.print("Introduce el valor del tercer ángulo: ");
+				angulo3 = in.nextInt();
+				resultado = clasificarPorAngulos(angulo1, angulo2, angulo3);
+			}
+			else if (op != 3)
+				System.out.println("opción incorrecta");
+			
+			if (op == 1 || op == 2)
+				System.out.println("Triángulo " + resultado);
+		} while(op != 3);
 	}
 	
 	static String clasificarPorLados(double l1, double l2, double l3) {
@@ -46,7 +82,6 @@ public class Ejercicio8 {
 //			if (a1 < 90 && a2 < 90 && a3 < 90)
 //				return "acutángulo";
 //			else if (a1 == 90 || a2 == 90 || a3 == 90)
-//				)
 //				return "rectángulo";
 //			else /* if (a1 > 90 || a2 > 90 || a3 > 90) */
 //				return "escaleno";
@@ -60,7 +95,6 @@ public class Ejercicio8 {
 			if (a1 < 90 && a2 < 90 && a3 < 90)
 				return "acutángulo";
 			else if (a1 == 90 || a2 == 90 || a3 == 90)
-				)
 				return "rectángulo";
 			else /* if (a1 > 90 || a2 > 90 || a3 > 90) */
 				return "escaleno";
