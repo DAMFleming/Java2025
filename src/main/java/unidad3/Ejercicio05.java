@@ -19,15 +19,39 @@ public class Ejercicio05 {
 		String linea;
 		System.out.print("> ");
 		while (!(linea = in.nextLine()).equalsIgnoreCase("fin")) {
-			char c = primerCaracterQueNoSeRepite(linea);
+			Character c = primerCaracterQueNoSeRepite(linea);
 			System.out.println(c);
 			System.out.print("> ");
 		}
 	}
 	
-	static char primerCaracterQueNoSeRepite(String s) {
-		
-		return ' ';
+	static Character primerCaracterQueNoSeRepite(String s) {
+		if (s.length() == 0)
+			return null;
+		int i=0, j;
+		do {
+			j = 0;
+			while (j < s.length() && (i == j || s.charAt(i) != s.charAt(j)))
+				j++;
+		} while (i < s.length() && j < s.length() && s.charAt(i) == s.charAt(j));
+		if (i < s.length())
+			return s.charAt(i);
+		else
+			return null;
 	}
+	
+//	static char primerCaracterQueNoSeRepite(String s) {
+//		int i=0;
+//		boolean seRepite = true;
+//		while (i < s.length() && seRepite) {
+//			int j = 0;
+//			while (j < s.length() && (i == j || s.charAt(i) != s.charAt(j)))
+//				j++;
+//			seRepite = j < s.length() && i != j && s.charAt(i) != s.charAt(j);
+//			if (seRepite)
+//				i++;
+//		}
+//		return ' ';
+//	}
 
 }
