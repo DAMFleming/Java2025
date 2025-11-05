@@ -28,18 +28,30 @@ public class Ejercicio05 {
 	static Character primerCaracterQueNoSeRepite(String s) {
 		if (s.length() == 0)
 			return null;
-		int i=0, j;
-		do {
-			j = 0;
-			while (j < s.length() && (i == j || s.charAt(i) != s.charAt(j)))
-				j++;
-			if (j < s.length())
-				i++;
-		} while (i < s.length() && j < s.length());
+		int i=0;
+		while (i < s.length() && (s.indexOf(s.charAt(i)) != i || s.lastIndexOf(s.charAt(i)) != i))
+			i++;
 		if (i < s.length())
 			return s.charAt(i);
 		else
 			return null;
 	}
+	
+//	static Character primerCaracterQueNoSeRepite(String s) {
+//		if (s.length() == 0)
+//			return null;
+//		int i=0, j;
+//		do {
+//			j = 0;
+//			while (j < s.length() && (i == j || s.charAt(i) != s.charAt(j)))
+//				j++;
+//			if (j < s.length())
+//				i++;
+//		} while (i < s.length() && j < s.length());
+//		if (i < s.length())
+//			return s.charAt(i);
+//		else
+//			return null;
+//	}
 
 }
