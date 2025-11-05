@@ -23,7 +23,7 @@ import java.util.Scanner;
  * el programa.
  */
 
-public class Ejercicio8 {
+public class Ejercicio08 {
 
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);

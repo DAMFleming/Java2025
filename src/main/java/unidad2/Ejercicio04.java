@@ -10,7 +10,7 @@ import java.io.InputStreamReader;
  * 1 y 12, se mostrará un mensaje de error.
  */
 
-public class Ejercicio4 {
+public class Ejercicio04 {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
