@@ -18,6 +18,7 @@ public class Ejercicio03 {
 	public static void main(String[] args) {
 		Pattern p = Pattern.compile("(?:\\>\\>(.+)\\<\\<(\\d+(?:\\.\\d+)?):(\\d+))");
 		try (Scanner in = new Scanner(System.in)) {
+			in.useDelimiter(";|:");
 			String linea;
 			double total = 0;
 			while (!(linea = in.nextLine()).equals("comprar")) {
