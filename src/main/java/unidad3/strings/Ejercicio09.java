@@ -1,4 +1,4 @@
-package unidad3;
+package unidad3.strings;
 
 import java.io.IOException;
 import java.util.Scanner;
