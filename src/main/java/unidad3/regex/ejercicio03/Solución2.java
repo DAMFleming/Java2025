@@ -10,12 +10,13 @@ import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Solución1 {
+public class Solución2 {
 
 	public static void main(String[] args) throws ParseException, IOException {
 		try (BufferedReader in = new BufferedReader(new InputStreamReader(System.in))) {
 			DecimalFormatSymbols dfs = new DecimalFormatSymbols(Locale.getDefault());
 			NumberFormat numberFormat = NumberFormat.getInstance(Locale.getDefault());
+			Pattern p = Pattern.compile(String.format("(?:\\>\\>(.+)\\<\\<(\\d+(?:\\%s\\d+)?):(\\d+))", dfs.getDecimalSeparator()));
 			String linea;
 			double total = 0;
 			StringBuilder sb = new StringBuilder();
