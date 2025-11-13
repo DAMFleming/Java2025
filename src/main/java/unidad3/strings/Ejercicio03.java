@@ -32,6 +32,7 @@ public class Ejercicio03 {
 			cont++;
 		}
 		System.out.printf("b dentro de a %d veces", cont);
+		in.close();
 	}
 	
 	

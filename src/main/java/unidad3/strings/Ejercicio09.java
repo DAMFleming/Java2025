@@ -2,8 +2,6 @@ package unidad3.strings;
 
 import java.io.IOException;
 import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 /*
  * 		\p{L}\d+.
@@ -30,7 +28,6 @@ public class Ejercicio09 {
 	
 	public static void main(String[] args) throws IOException {
 		var in = new Scanner(System.in);
-		String linea;
 		double total = 0;
 		System.out.print("> ");
 		String subcadena;
@@ -38,6 +35,7 @@ public class Ejercicio09 {
 			total += calcular(subcadena);
 		}
 		System.out.println(total);
+		in.close();
 	}
 	
 	static double calcular(String s) {

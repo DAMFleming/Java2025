@@ -1,6 +1,6 @@
 package unidad2;
 
-import java.awt.geom.Point2D;
+//import java.awt.geom.Point2D;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -35,11 +35,26 @@ public class Ejercicio02 {
 			System.out.println("Exteriores");
 		}
 		else {
-			if () {
-				
+			if (dCentros == sumRadios) {
+				System.out.println("Tangentes Exteriores");
 			}
 			else {
-				
+				if (dCentros > difRadios) {
+					System.out.println("Secantes");
+				}
+				else {
+					if (dCentros == difRadios) {
+						System.out.println("Tangentes Interiores");
+					}
+					else {
+						if (dCentros < sumRadios) {
+							System.out.println("Interiores");
+						}
+						else {
+							System.out.println("Concéntricas");
+						}
+					}
+				}
 			}
 		}
 	}

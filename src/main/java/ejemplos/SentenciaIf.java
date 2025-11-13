@@ -8,6 +8,7 @@ public class SentenciaIf {
 		Scanner in = new Scanner(System.in);
 		System.out.print("Introduce un año: ");
 		int año = in.nextInt();
+		in.close();
 		if (año % 4 == 0) {
 			if (año % 100 == 0) {
 				if (año % 400 == 0)

@@ -29,6 +29,7 @@ public class Ejercicio01 {
 		System.out.print("Introduce otro número entero (divisor): ");
 		double divisor = in.nextDouble();
 		System.out.printf("%f / %f = %f", dividendo, divisor, dividendo / divisor);
+		in.close();
 	}
 
 	

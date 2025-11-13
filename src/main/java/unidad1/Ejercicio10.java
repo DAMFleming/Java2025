@@ -20,7 +20,7 @@ public class Ejercicio10 {
 		String nombre = teclado.readLine(); 
 		long t1 = System.nanoTime();
 		long t = t1 - t0;
-		System.out.printf("Has tardado %d milisegundos en introducir tu nombre\n", t);
+		System.out.printf("%s, has tardado %d milisegundos en introducir tu nombre \n", nombre, t);
 	}
 
 }

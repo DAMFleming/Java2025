@@ -15,13 +15,14 @@ import java.util.Scanner;
 public class Ejercicio05 {
 
 	public static void main(String[] args) {
-		Scanner in = new Scanner(System.in);
-		String linea;
-		System.out.print("> ");
-		while (!(linea = in.nextLine()).equalsIgnoreCase("fin")) {
-			Character c = primerCaracterQueNoSeRepite(linea);
-			System.out.println(c);
+		try (Scanner in = new Scanner(System.in)) {
+			String linea;
 			System.out.print("> ");
+			while (!(linea = in.nextLine()).equalsIgnoreCase("fin")) {
+				Character c = primerCaracterQueNoSeRepite(linea);
+				System.out.println(c);
+				System.out.print("> ");
+			}
 		}
 	}
 	

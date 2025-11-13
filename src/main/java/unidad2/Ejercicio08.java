@@ -61,6 +61,7 @@ public class Ejercicio08 {
 			if (op == 1 || op == 2)
 				System.out.println("Triángulo " + resultado);
 		} while(op != 3);
+		in.close();
 	}
 	
 	static String clasificarPorLados(double l1, double l2, double l3) {

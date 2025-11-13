@@ -8,7 +8,6 @@ import java.text.NumberFormat;
 import java.text.ParseException;
 import java.util.Locale;
 import java.util.Scanner;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Solución2 {
@@ -37,53 +36,53 @@ public class Solución2 {
 		try (Scanner scanner = new Scanner(s)) {
 			String mueble;
 			double precio, cantidad;
+			int pos = 0;
 			try {
 				scanner.skip(">>");
+				pos = scanner.match().end();
 				try {
 					scanner.skip("[\\p{L}\\s-\\d]+");
 					mueble = scanner.match().group();
+					pos = scanner.match().end();
 					try {
 						scanner.skip("<<");
+						pos = scanner.match().end();
 						try {
 							scanner.skip(numberRegex);
 							precio = numberFormat.parse(scanner.match().group()).doubleValue();
+							pos = scanner.match().end();
 							try {
 								scanner.skip(":");
+								pos = scanner.match().end();
 								try {
 									scanner.skip("\\d+");
 									cantidad = Double.parseDouble(scanner.match().group());
-									sb.append(String.format("%s%s (%d)",sb.length() == 0 ? "" : ", ", mueble, cantidad));
+									sb.append(String.format("%s%s (%d)",sb.length() == 0 ? "" : ", ", mueble, (int) cantidad));
 									return cantidad * precio;
 								} catch (Exception e) {
-									printError("una cantidad", scanner.match().start());
-									return 0;
+									printError("una cantidad", pos);
 								}
 							} catch (Exception e) {
-								printError(":", scanner.match().start());
-								return 0;
+								printError(":", pos);
 							}
 						} catch (Exception e) {
-							printError("un precio", scanner.match().start());
-							return 0;
+							printError("un precio", pos);
 						}
 					} catch (Exception e) {
-						printError("<<", scanner.match().start());
-						return 0;
+						printError("<<", pos);
 					}
 				} catch (Exception e) {
-					printError("un nombre de mueble válido", scanner.match().start());
-					return 0;
+					printError("un nombre válido para el mueble", pos);
 				}
 			} catch (Exception e) {
-				printError(">>", scanner.match().end());
-				return 0;
+				printError(">>", pos);
 			}
+			return 0;
 		}
 	}
 	
 	static void printError(String s, int i) {
-		System.out.println(" ".repeat(i) + "^");
-		System.out.print("error: ");
-		System.out.println("se esperaba \">>\"");
+		System.out.println(" ".repeat(i + 2) + "^");
+		System.out.printf("error: se esperaba %s\n", s);
 	}
 }

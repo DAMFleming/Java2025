@@ -22,6 +22,7 @@ public class Ejercicio12 {
 		Scanner in = new Scanner(System.in);
 		System.out.print("Valor máximo de la suma: ");
 		int max = in.nextInt();
+		in.close();
 		while (suma < max) {
 			int n = random.nextInt(900) + 100;
 			suma += n;

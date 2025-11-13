@@ -17,33 +17,30 @@ public class Ejercicio05 {
 		System.out.print("Introduce un mes: ");
 		String mes = in.readLine();
 		
-		if ("enero".equalsIgnoreCase(mes) || "marzo".equalsIgnoreCase(mes)) { // es un més de 31 días
-				System.out.println("31 días");
+		if ("enero".equalsIgnoreCase(mes) || 
+			"marzo".equalsIgnoreCase(mes) ||
+		    "mayo".equalsIgnoreCase(mes) ||
+		    "julio".equalsIgnoreCase(mes) ||
+		    "agosto".equalsIgnoreCase(mes) ||
+		    "octubre".equalsIgnoreCase(mes) ||
+		    "diciembre".equalsIgnoreCase(mes)){
+			System.out.println("31 días");
+		}
+		else {
+			if ("febrero".equalsIgnoreCase(mes)) {
+				System.out.println("28 O 29 días");
 			}
 			else {
-				if ("febrero".equalsIgnoreCase(mes)) { // es febrero
-					System.out.println("28 O 29 días");
+				if ("abril".equalsIgnoreCase(mes) || 
+					"junio".equalsIgnoreCase(mes) ||
+					"septiembre".equalsIgnoreCase(mes) ||
+					"noviembre".equalsIgnoreCase(mes)){
+					System.out.println("30 días");
 				}
 				else {
-					if () { // es un més de 30 días
-						System.out.println("30 días");
-					}
-					else {
-						System.out.println("No has introducido un més válido");
-					}
+					System.out.println("No has introducido un més válido");
 				}
 			}
 		}
-		
-//		if (mes < 1 || mes > 12) // el més no está entre 1 y 12
-//			System.out.println("No es un mes válido");
-//		else if (mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes = 10 || mes == 12) // es un més de 31 días
-//			System.out.println("31 días");
-//		else if (mes == 2) // es febrero
-//			System.out.println("28 O 29 días");
-//		else // es un més de 30 días
-//			System.out.println("30 días");
-	
 	}
-	
 }

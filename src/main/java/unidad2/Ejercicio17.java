@@ -46,6 +46,7 @@ public class Ejercicio17 {
 			}
 		} while(cpu != jugador);
 		System.out.printf("Has acertado después de %d intentos!", contador);
+		in.close();
 		
 //		System.out.printf("He pensado un número entre 1 y %d, adivina cuál es:\n", max);
 //		int jugador;

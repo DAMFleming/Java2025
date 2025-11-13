@@ -2,9 +2,7 @@ package unidad3.regex;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Ejercicio05 {
@@ -15,8 +13,7 @@ public class Ejercicio05 {
 	 * @throws IOException */
 	public static void main(String[] args) throws IOException {
 		Pattern p= Pattern.compile("(?:\\d{4}-){3}(\\d{4})");
-		String line=null;
-		Matcher m=null;
+		String line;
 		
 		try(BufferedReader reader= new BufferedReader(new InputStreamReader(System.in))){
 			while((line=reader.readLine())!=null) {

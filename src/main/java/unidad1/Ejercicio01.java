@@ -26,11 +26,10 @@ public class Ejercicio01 {
 		int e = 33;
 		int f;
 		
-		
 //		int a = -9, b = 21, c = -35, d = 51, e = 33;
 		
 		System.out.println((f = ((a + b) * e)) / (d % c));
-	
+		System.out.println(f);
 	}
 
 }
