@@ -24,7 +24,7 @@ public class Ejercicio01 {
 			contadores[tirada]++;
 		}
 		for (int i=0; i<contadores.length; i++)
-			System.err.printf("El número %d ha salido %d veces\n", i + 1, contadores[i]);
+			System.out.printf("El número %d ha salido %d veces\n", i + 1, contadores[i]);
 	}
 	
 }
