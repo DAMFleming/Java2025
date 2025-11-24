@@ -62,12 +62,43 @@ public class Ejercicio05 {
 //		return iguales;
 //	}
 	
+	static double desviacionEstandar(int [] v) {
+		double media = 0;
+		for (int valor: v)
+			media += valor;
+		media /= v.length;
+		double s = 0;
+		for (int valor: v)
+			s += (valor - media);
+		return Math.sqrt(s / (v.length - 1));
+	}
+	
+	static int subsecuenciaMasLarga(int[] v) {
+		int record = 0;
+		int contador = 1;
+		
+		for (int i = 0; i < v.length - 1; i++) {
+			if (v[i] < v[i+1])
+				contador++;
+			else {
+				if (contador > record) {
+					record = contador;
+				}
+				contador = 1;
+			}
+		}
+		return record;
+	}
+	
 	public static void main(String[] args) {
 		int [] vector = {21, 30, 2, 57, 71, 4, 29};
 		int max = maximoAlmacenado(vector);
 		System.out.println(max);
 		double media = mediaExacta(vector);
 		System.out.println(media);
+		
+		int[] v= {5, 9, 11, 2, 7, 17, -9, 0, 13, 209, 75, 99, 21};
+		System.out.println("La subsecuencia más larga: "+subsecuenciaMasLarga(v));
 	}
 	
 	
