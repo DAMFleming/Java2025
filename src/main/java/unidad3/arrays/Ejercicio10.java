@@ -9,7 +9,19 @@ public class Ejercicio10 {
 		int [][] m = new int[r.nextInt(19) + 2][r.nextInt(19) + 2];
 		for (int i=0; i<m.length; i++)
 			for (int j=0; j<m[i].length; j++)
-				m[i][j] = r.nextInt();
+				m[i][j] = r.nextInt(100);
+		int [] sumaFilas = sumaFilas(m);
+		int [] sumaColumnas = sumaColumnas(m);
+		if (sumaFilas != null && sumaColumnas != null) {
+			for (int i=0; i<m.length; i++) {
+				for (int j=0; j<m[i].length; j++)
+					System.out.printf(" %2d  ", m[i][j]);
+				System.out.printf("= %d\n", sumaFilas[i]);
+			}
+			System.out.println("-".repeat(sumaColumnas.length * 5));
+			for (int i=0; i<sumaColumnas.length; i++)
+				System.out.printf("%3d  ", sumaColumnas[i]);
+		}
 	}
 	
 	static int [] sumaFilas(int [][] m) {
