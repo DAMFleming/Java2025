@@ -1,0 +1,4 @@
+Escribe un programa <uppercase>que lea un documento de texto</uppercase> que encierre
+parte de su contenido entre etiquetas <uppercase> … </uppercase>
+y lo transforme <uppercase>convirtiendo</uppercase> a mayúsculas el contenido encerrado
+entre las etiquetas y <uppercase>suprimiendo las mismas</uppercase>.
